@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">ACADEMIC MANAGEMENT</p>
+      <h1>Student Management System</h1>
+      <p class="subtitle">Manage student records, marks and academic performance.</p>
+    </div>
+    <button id="clearAll" class="danger-outline">Clear All</button>
+  </header>
+
+  <main>
+    <section class="stats">
+      <div class="stat"><span>Total Students</span><strong id="totalStudents">0</strong></div>
+      <div class="stat"><span>Average Score</span><strong id="overallAverage">0.00</strong></div>
+      <div class="stat"><span>Top Grade</span><strong id="topGrade">—</strong></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading"><h2>Add Student</h2><span>All marks are out of 100</span></div>
+      <form id="studentForm">
+        <div class="grid">
+          <label>Roll Number<input id="rollNumber" type="number" min="1" required></label>
+          <label>Name<input id="name" type="text" maxlength="50" required></label>
+          <label>Java Marks<input id="javaMarks" type="number" min="0" max="100" step="0.01" required></label>
+          <label>DSA Marks<input id="dsaMarks" type="number" min="0" max="100" step="0.01" required></label>
+          <label>Maths Marks<input id="mathsMarks" type="number" min="0" max="100" step="0.01" required></label>
+        </div>
+        <button class="primary" type="submit">Add Student</button>
+        <p id="formMessage" class="message"></p>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <h2>Student Records</h2>
+        <input id="search" class="search" type="search" placeholder="Search by name or roll number">
+      </div>
+      <div id="records" class="records"></div>
+    </section>
+  </main>
+
+  <footer>Student Management System · Java project with browser demo</footer>
+  <script src="script.js"></script>
+</body>
+</html>
